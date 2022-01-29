@@ -1,0 +1,102 @@
+<html>
+
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    tr,td {
+  padding:5px;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+    tr:nth-child(even) {
+      background-color: #bee9e9;
+    }
+    tr:nth-child(odd) {
+      background-color: #ccf5f5;
+    }
+
+    input{
+      padding: 5px;
+      border-radius: 4px;
+    }
+
+
+.my-btn{
+  background-color: #008CBA;;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+ 
+}
+   
+
+    </style>
+
+
+  <body>
+    <h1>THIS IS DEPARTMENTS PAGE</h1>
+  
+<!--      Adding Departments    -->    
+
+    <h1>Add Department</h1>
+    <form method="POST" action="./dept">
+      department: <input type="text" name="department">
+      <input type="submit" value="Add">
+    </form>
+
+    <h1>Departments</h1>
+    <table>
+      <tr>
+        <th>Department ID</th>
+        <th>Department Name</th>
+        <th>Update</th>
+        <th>Delete Record</th>
+      </tr>
+
+      {% for dept in departments %}
+        <tr>
+          <td>
+            {{dept.d_id}}
+          </td>
+          <td>
+            {{dept.d_name}}
+          </td>
+
+          <td>
+            <form method="POST" action="./updatedept" style="display: inline">
+              <input type="hidden" value="{{dept.d_id}}" name="d_id">
+              <input type="text" value="{{dept.d_name}}" name="d_name">
+              <input type="submit" value="Update">
+            </form>
+          </td>
+          <td>
+            <form method="POST" action="./deletedept" style="display: inline">
+              <input type="hidden" value="{{dept.d_id}}" name="d_id">
+              <input type="submit" value="Delete">
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+
+<form action="./"><input class="my-btn" type="submit" value="Go back"></form>
+
+  </body>
+</html>

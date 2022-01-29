@@ -1,0 +1,104 @@
+<html>
+
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    tr,td {
+  padding:5px;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+    tr:nth-child(even) {
+      background-color: #bee9e9;
+    }
+    tr:nth-child(odd) {
+      background-color: #ccf5f5;
+    }
+
+    input{
+      padding: 5px;
+      border-radius: 4px;
+    }
+
+
+.my-btn{
+  background-color: #008CBA;;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+ 
+}
+   
+
+</style>
+
+
+  <body>
+    <h1>THIS IS EMPLOYEE PAGE</h1>
+    <h1>Add Employee</h1>
+    <form method="POST" action="/home">
+      Name: <input type="text" name="name">
+      Deparatment: <input type="text" name="designation">
+      <input type="submit" value="Add">
+    </form>
+
+    <h1>Employee</h1>
+    <table>
+      <tr>
+        <th>Empolyee ID</th>
+        <th>Empolyee Name</th>
+        <th>Designation</th>
+        <th>Update</th>
+        <th>Delete Record</th>
+      </tr>
+
+      {% for book in books %}
+        <tr>
+          <td>
+            {{book.id}}
+          </td>
+          <td>
+            {{book.name}}
+          </td>
+          <td>
+            {{book.designation}}
+          </td>
+
+          <td>
+            <form method="POST" action="./update" style="display: inline">
+              <input type="hidden" value="{{book.id}}" name="id">
+              <input type="text" value="{{book.name}}" name="name">
+              <input type="submit" value="Update">
+            </form>
+          </td>
+          <td>
+            <form method="POST" action="./delete" style="display: inline">
+              <input type="hidden" value="{{book.id}}" name="id">
+              <input type="submit" value="Delete">
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+
+  <form action="./">
+    <input class="my-btn" type="submit" value="Go Back"></form>
+  </body>
+</html>

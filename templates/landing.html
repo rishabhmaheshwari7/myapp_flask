@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container { 
+  height: 200px;
+  position: relative;
+  border: 3px solid gray; 
+  border-radius: 20px ;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.my-btn{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  width:200px;
+  height: 50px;
+}
+</style>
+</head>
+<body>
+
+<h2 align="center">Employee App</h2>
+<p align="center">Select To add/remove Employee/Department</p>
+
+<div class="container">
+  <div class="center">
+    <form action="./home"><input class="my-btn" type="submit" value="Employee"></form>
+     <form action="./dept"><input class="my-btn" type="submit" value="Department"></form>
+  </div>
+</div>
+
+
+</body>
+</html>
