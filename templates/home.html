@@ -69,28 +69,28 @@
         <th>Delete Record</th>
       </tr>
 
-      {% for book in books %}
+      {% for employee in employees %}
         <tr>
           <td>
-            {{book.id}}
+            {{employee.id}}
           </td>
           <td>
-            {{book.name}}
+            {{employee.name}}
           </td>
           <td>
-            {{book.designation}}
+            {{employee.designation}}
           </td>
 
           <td>
             <form method="POST" action="./update" style="display: inline">
-              <input type="hidden" value="{{book.id}}" name="id">
-              <input type="text" value="{{book.name}}" name="name">
+              <input type="hidden" value="{{employee.id}}" name="id">
+              <input type="text" value="{{employee.name}}" name="name">
               <input type="submit" value="Update">
             </form>
           </td>
           <td>
             <form method="POST" action="./delete" style="display: inline">
-              <input type="hidden" value="{{book.id}}" name="id">
+              <input type="hidden" value="{{employee.id}}" name="id">
               <input type="submit" value="Delete">
             </form>
           </td>
@@ -99,6 +99,8 @@
     </table>
 
   <form action="./">
-    <input class="my-btn" type="submit" value="Go Back"></form>
+    <input class="my-btn" type="submit" value="Go Back">
+  </form>
+  
   </body>
 </html>
