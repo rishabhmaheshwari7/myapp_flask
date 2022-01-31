@@ -17,7 +17,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 
-class Book(db.Model):
+class Employee(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(20), nullable=False)
     designation = db.Column(db.String(120), nullable=False)
@@ -40,27 +40,27 @@ def landing():
 
 @app.route("/home", methods=["GET", "POST", "DELETE"])
 def home():
-    books = None
+    employees = None
     if request.method=='POST':
         try:
             p_name = request.form.get("name")
             p_post = request.form.get("designation")
-            person =Book(name=p_name, designation= p_post)
+            person =Employee(name=p_name, designation= p_post)
             db.session.add(person)
             db.session.commit()
         except Exception as e:
-            print("Failed to add book")
+            print("Failed to add employee")
             print(e)
-    books = Book.query.all()
+    employees = Employee.query.all()
     departments= ['a','b','c','d'] #and paas this to render
-    return render_template("home.html", books=books,departments=departments)
+    return render_template("home.html", employees=employees,departments=departments)
 
 @app.route("/update", methods=["POST"])
 def update():
     try:
         name_to_update = request.form.get("name")
         id_to_update = request.form.get("id")
-        person = Book.query.filter_by(id=id_to_update).first()
+        person = Employee.query.filter_by(id=id_to_update).first()
         person.name = name_to_update
         db.session.commit()
     except Exception as e:
@@ -72,8 +72,8 @@ def update():
 @app.route("/delete", methods=["POST"])
 def delete():
     p_id = request.form.get("id")
-    book = Book.query.filter_by(id=p_id).first()
-    db.session.delete(book)
+    employee = Employee.query.filter_by(id=p_id).first()
+    db.session.delete(employee)
     db.session.commit()
     return redirect("/home")
 
@@ -123,6 +123,5 @@ def deletedept():
 
 
 if __name__ == "__main__":
-    # db.drop_all()
     db.create_all()
     app.run(host='0.0.0.0', port=8087, debug=True)
