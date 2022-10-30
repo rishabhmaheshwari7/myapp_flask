@@ -1,0 +1,129 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left:10px;
+    /* top: 0px;    */
+}
+/* .assessment{
+    width:900px;
+    height:600px;
+    border-radius: 10px;
+    background-color: #282763;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    margin-top:2cm;
+} */
+.options-button{
+    width:600px;
+    height:50px;
+    margin:5px;
+    border:none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.options{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.options-button:hover{
+    background-color: #bee2fa;
+    color:black;
+}
+.options-button:active{
+    background-color: #79F9C1;
+    color:black;
+}
+.options-button:focus{
+    background-color: #79F9C1;
+    color:black;
+}
+ .button-container{
+    width:900px;
+    height:500px;
+    border-radius: 10px;    
+    position: relative;
+} 
+.next-button{
+   position: absolute;
+   /* bottom: 5px; */
+   right: 16px;
+}
+.prev-button{
+    position: absolute;
+    /* bottom: 20px; */
+    left: 16px;
+}
+.submit-button{
+    position: absolute;
+    /* bottom: 20px; */
+    right: 16px;
+}
+.add-note-button{
+   
+    position: absolute;
+    top: 0px;
+    right: 2px;
+    margin-right: 5px;
+    
+}
+.hover-hide{
+    display:none;
+}
+.add-note-button:hover + .hover-hide{
+    display:block;
+    position: absolute;
+    top: 0px;
+    right: 2px;
+}
+
+.add-notes-button{
+    background-color: blanchedalmond;
+    color:white;
+}
+.hide{
+    display:none;
+}
+.show{
+    display:inline-block;
+    margin-right: 5px;
+    margin-left:10px;
+    align-items: center;
+  }
+
+.outer-container{
+    position: absolute;
+    top:50px;
+}
+
+/* @media screen and (max-width:1200px)
+{
+    .inner-container{
+        padding:80px;
+    }
+}
+*/
+
+/* @media screen and (max-width:600px)
+{ */
+    /* For tablets: */
+    /* .assessment{
+        width:500px;
+    }
+    .assessment button{
+      width:300px;
+    } */
+/* }  */
+
+.active-option{
+    background: #79F9C1;
+}
