@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Thank You Component Should render the thank you conclusion text correctly 1`] = `
+Array [
+  <div
+    class="outer-container"
+    role="thank-you"
+  >
+    <div
+      class="container"
+    >
+      <h2>
+        Your responses have been recorded
+      </h2>
+      <h1>
+        SUCCESS
+      </h1>
+      <p>
+        Thank you for your time!
+      </p>
+    </div>
+  </div>,
+]
+`;

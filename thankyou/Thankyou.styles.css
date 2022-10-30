@@ -1,0 +1,31 @@
+.t-outer-container{
+    margin:0;
+    padding:0;
+    font-family:"montserrat",sans-serif;
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:#e7f3ff;
+    align-items: flex-start;
+}
+.gif-design{
+    background-color: aquamarine;
+    width:600px;
+    height:600px;
+    margin-bottom: 1px;
+    border-radius: 10%;
+    vertical-align: top;
+}
+.t-container{
+    width:100%;
+    position:absolute;
+    top:80%;
+    transform:translateY(-50%);
+    text-align:center;
+    color:#343434;
+    padding-top: -3px;
+}
+.t-container a{
+    color:blue;
+}
