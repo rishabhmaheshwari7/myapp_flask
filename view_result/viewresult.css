@@ -1,0 +1,41 @@
+.view-result-container{  
+    background-color: white;
+    font-weight: bold;
+    display:flex;
+    flex-direction: row;
+    width: 100%; 
+    justify-content: center;
+    position:sticky;
+    top:0;
+}
+.view-result-linker{
+    color:#282763;
+    text-decoration: none;
+    padding:0.5rem 1rem;
+    font-size: 20px;
+    
+}
+.view-result-linker:hover{
+    background-color:#004890;
+    color: white;
+    border-radius:4px;
+    transition:all 0.2s ease-out;
+}
+.view-result-linker:focus{
+    background-color:#004890;
+    color: white;
+    border-radius:4px;
+    transition:all 0.2s ease-out;
+}
+.view-result-linker:active{
+    background-color:#004890;
+    color: white;
+    border-radius:4px;
+    transition:all 0.2s ease-out;
+}
+.active{
+     background-color:#004890;
+    color: white;
+    border-radius:4px;
+    transition:all 0.2s ease-out;
+}
