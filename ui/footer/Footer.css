@@ -1,0 +1,27 @@
+.footer-design{
+    color:white;
+    background: #282763;
+    /* padding-top: 0; */
+    bottom:0;
+    width:100%;
+    font-size: larger;
+    height: 200px;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.row{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.col{
+    text-align: center;
+    padding-top: 50px;
+}

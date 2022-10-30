@@ -1,0 +1,25 @@
+.nav-container{  
+    font-weight: bold;
+    display:flex;
+    position: absolute;
+    top:1px;
+    padding-top:25px;
+    margin-left: 350px;;
+    flex-direction: row;
+    width: 60%; 
+    align-items: center;
+    justify-content: center;
+}
+.linker{
+    color:white;
+    text-decoration: none;
+    padding:0.5rem 1rem;
+    font-size: 25px;
+    
+}
+.linker:hover{
+    background-color:#004890;
+    color: white;
+    border-radius:4px;
+    transition:all 0.2s ease-out;
+}

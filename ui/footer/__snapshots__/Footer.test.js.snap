@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component Should render the footer text correctly 1`] = `
+Array [
+  <div
+    class="footer-design"
+    role="footer"
+  >
+    <div
+      class="row"
+    >
+      <p
+        class="col"
+      >
+        <br />
+         Leap Bootcamp © 
+        2022
+         
+        <br />
+        Team 9Bits 
+        <br />
+         All Rights Reserved |
+        <a
+          href="https://www.lowes.com/l/about/terms-and-conditions-of-use"
+        >
+          Terms of Service
+        </a>
+         |
+        <a
+          href="https://www.lowes.com/l/about/privacy-and-security-statement"
+        >
+          Privacy
+        </a>
+      </p>
+    </div>
+  </div>,
+]
+`;
