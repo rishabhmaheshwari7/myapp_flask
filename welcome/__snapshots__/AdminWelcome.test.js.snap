@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome Admin Component Should render the admin welcome text correctly 1`] = `
+Array [
+  <div
+    class="welcome-outer-container"
+    role="welcome"
+  >
+    <img
+      alt="Admin Welcome"
+      class="welcome-image"
+      src="https://res.infoq.com/articles/agile-team-maturity-assessment/en/smallimage/1G_yz7zg-1624490275821.jpg"
+    />
+    <div
+      class="welcome-container"
+    >
+      <h2>
+        Welcome to the Admin Dashboard
+      </h2>
+      <br />
+      <h1>
+        MAPLE
+      </h1>
+      <br />
+      <br />
+      <p>
+        Maturity Assessment Platform : Lowe's Engineering
+      </p>
+    </div>
+  </div>,
+]
+`;
