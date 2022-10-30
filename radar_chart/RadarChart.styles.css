@@ -1,0 +1,22 @@
+.radarBox{
+    height: 900px;
+    margin: 15px;
+    padding: 15px;
+    /*background: #dde3ed;*/
+    background-image: linear-gradient(to bottom right, rgb(159, 212, 247), rgb(216, 230, 255));
+    border-radius: 25px;
+
+}
+.radar{
+    width: 850px;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+.headText{
+    text-align: center;
+}
+.page{
+    background-color: rgb(214, 236, 247);
+    padding: 10px;
+}
